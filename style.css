@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before{
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    background-image: linear-gradient(125deg,#1E90FF,#008080,#3CB371,#48D1CC,#9370DB,#DDA0DD,#BA55D3,#B22222);
+    background-size: 400% 400%;
+    animation: bganimation 14s infinite;
+  }
+
+.title_game {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.cardWrapper {
+    max-width: 90%;
+    max-height: auto;
+    background-image: url(./img/nature-forest.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;   
+}
+
+.card {
+    width: 110px;
+    height: 140px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 20px;
+    cursor: pointer;
+    transition:  1s;
+    position: relative;
+    perspective: 1000px;
+    background-position:center;
+    background-size:cover; 
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.6s ;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    background-color: rgb(236, 211, 69);
+
+}
+
+.bee {
+    background-image: url(./img/bee.jpg);
+}
+
+.bull {
+    background-image: url(./img/bull.jpg);
+}
+
+.chicken {
+    background-image: url(./img/chicken.jpg);
+}
+
+.cow{
+    background-image: url(./img/cow.jpg);
+}
+
+.dog{
+    background-image: url(./img/dog.jpg);
+}
+
+.duck{
+    background-image: url(./img/duck.jpg);
+}
+
+.fox{
+    background-image: url(./img/fox.jpg);
+}
+
+.goat{
+    background-image: url(./img/goat.jpg);
+}
+
+.goose{
+    background-image: url(./img/goose.jpg);
+}
+
+.hare{
+    background-image: url(./img/hare.jpg);
+}
+
+.hedgehog{
+    background-image: url(./img/hedgehog.jpg);
+}
+
+.horse{
+    background-image: url(./img/horse.jpg);
+}
+
+.pig{
+    background-image: url(./img/pig.jpg);
+}
+
+.pony{
+    background-image: url(./img/pony.jpg);
+}
+
+.rabbit{
+    background-image: url(./img/rabbit.jpg);
+}
+
+.squirrel{
+    background-image: url(./img/squirrel.jpg);
+}
+
+/* анимация для карточек -------------js------------------------------- */
+
+.card  { 
+    transform: rotateY(180deg);
+}
+
+.card.active {
+    transform: rotateY(360deg); 
+}   
+  
+.card.active .back{
+    transform: rotateY(-180deg); 
+}   
+
+
+/* ------анимация для фона--------------------js---------- */
+
+@keyframes bganimation{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+}
